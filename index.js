@@ -6,7 +6,7 @@ let shuttleCabinReady = true;
 let crewStatus = spaceSuitsOn && shuttleCabinReady;
 let computerStatus = 200;
 let shuttleSpeed = 15000;
-
+let commandOverride = true;
 // BEFORE running the code, predict what will be printed to the console by the following statements:
 
 if (engineIndicatorLight === "green") {
@@ -39,4 +39,13 @@ if (shuttleSpeed > 17500) {
   console.log("ALERT: Cannot maintain orbit!");
 } else {
   console.log("Stable speed");
+}
+//D
+console.log("No");
+
+//6 Final bit of fun.
+if (fuelLevel > 20000 && engineIndicatorLight === !"red blinking" || commandOverride === true) {
+  console.log("Cleared for launch!");
+} else {
+  console.log("Launch scrubbed!");
 }
